@@ -8,7 +8,6 @@ class Shard:
         self.startingHash = starting_hash
         self.endingHash = ending_hash
 
-
 BTC_USD = "6ea0d2ef-6dd0-4adb-ad32-f7f3db58ccbe"
 LTC_USD = "2cbedd6a-dca2-48b1-a9db-9a1b24c2f85c"
 ETH_USD = "bff074a3-3564-4479-a4bd-c49766acc63c"
@@ -26,6 +25,32 @@ GEMINI = "48ea171d-928b-4509-a209-e7a6dd7392d1"
 BINANCE = "a05e02d1-2789-49a3-aa83-1d3c9a442ea8"
 
 keys_market_first = [
+    # Binance
+    EOS_BTC + BINANCE,
+    XRP_BTC + BINANCE,
+    # Bitfinex                           +
+    BTC_USD + BITFINEX,
+    LTC_USD + BITFINEX,
+    ETH_USD + BITFINEX,
+    XRP_USD + BITFINEX,
+    EOS_USD + BITFINEX,
+    EOS_BTC + BITFINEX,
+    # Bitstamp                           +
+    BTC_USD + BITSTAMP,
+    LTC_USD + BITSTAMP,
+    ETH_USD + BITSTAMP,
+    XRP_USD + BITSTAMP,
+    # Bittrex                            +
+    XRP_USD + BITTREX,
+    EOS_BTC + BITTREX,
+    BTC_USD + BITTREX,
+    LTC_USD + BITTREX,
+    ETH_USD + BITTREX,
+    # BTSE                               +
+    BTC_USD + BTSE,
+    LTC_USD + BTSE,
+    ETH_USD + BTSE,
+    # Coinbase Pro                       +
     BTC_USD + COINBASE_PRO,
     LTC_USD + COINBASE_PRO,
     ETH_USD + COINBASE_PRO,
@@ -33,13 +58,17 @@ keys_market_first = [
     EOS_USD + COINBASE_PRO,
     EOS_BTC + COINBASE_PRO,
     XRP_BTC + COINBASE_PRO,
-    # Bitfinex
-    BTC_USD + BITFINEX,
-    LTC_USD + BITFINEX,
-    ETH_USD + BITFINEX,
-    XRP_USD + BITFINEX,
-    EOS_USD + BITFINEX,
-    EOS_BTC + BITFINEX
+    # Gemini                             +
+    BTC_USD + GEMINI,
+    LTC_USD + GEMINI,
+    ETH_USD + GEMINI,
+    # Kraken                             +
+    BTC_USD + KRAKEN,
+    LTC_USD + KRAKEN,
+    ETH_USD + KRAKEN,
+    XRP_USD + KRAKEN,
+    EOS_USD + KRAKEN,
+    EOS_BTC + KRAKEN,
 ]
 
 keys_market_only = [
@@ -53,6 +82,26 @@ keys_market_only = [
 ]
 
 keys_market_string = [
+    'EOSBTC',
+    'XRPBTC',
+    "tBTCUSD",
+    "tLTCUSD",
+    "tETHUSD",
+    "tXRPUSD",
+    "tEOSUSD",
+    "tEOSBTC"
+    'btcusd'
+    'ltcusd',
+    'ethusd',
+    'xrpusd'
+    'USD-XRP',
+    'BTC-EOS',
+    'USD-BTC',
+    'USD-LTC',
+    'USD-ETH',
+    'BTC-USD_0',
+    'LTC-USD_0',
+    'ETH-USD_0',
     'BTC-USD',
     'LTC-USD',
     'ETH-USD',
@@ -60,15 +109,44 @@ keys_market_string = [
     'EOS-USD',
     'EOS-BTC',
     'XRP-BTC',
-    "tBTCUSD",
-    "tLTCUSD",
-    "tETHUSD",
-    "tXRPUSD",
-    "tEOSUSD",
-    "tEOSBTC"
+    'BTCUSD'
+    'LTCUSD',
+    'ETHUSD',
+    'XBT/USD',
+    'LTC/USD',
+    'ETH/USD',
+    'XRP/USD',
+    'EOS/USD',
+    'EOS/XBT',
 ]
 
 keys_exchange_first = [
+    # Binance
+    BINANCE + EOS_BTC,
+    BINANCE + XRP_BTC,
+    # Bitfinex
+    BITFINEX + BTC_USD,
+    BITFINEX + LTC_USD,
+    BITFINEX + ETH_USD,
+    BITFINEX + XRP_USD,
+    BITFINEX + EOS_USD,
+    BITFINEX + EOS_BTC,
+    # Bitstamp
+    BITSTAMP + BTC_USD,
+    BITSTAMP + LTC_USD,
+    BITSTAMP + ETH_USD,
+    BITSTAMP + XRP_USD,
+    # Bittrex
+    BITTREX + XRP_USD,
+    BITTREX + EOS_BTC,
+    BITTREX + BTC_USD,
+    BITTREX + LTC_USD,
+    BITTREX + ETH_USD,
+    # BTSE
+    BTSE + BTC_USD,
+    BTSE + LTC_USD,
+    BTSE + ETH_USD,
+    # Coinbase Pro
     COINBASE_PRO + BTC_USD,
     COINBASE_PRO + LTC_USD,
     COINBASE_PRO + ETH_USD,
@@ -76,13 +154,17 @@ keys_exchange_first = [
     COINBASE_PRO + EOS_USD,
     COINBASE_PRO + EOS_BTC,
     COINBASE_PRO + XRP_BTC,
-    # Bitfinex
-    BITFINEX + BTC_USD,
-    BITFINEX + LTC_USD,
-    BITFINEX + ETH_USD,
-    BITFINEX + XRP_USD,
-    BITFINEX + EOS_USD,
-    BITFINEX + EOS_BTC
+    # Gemini
+    GEMINI + BTC_USD,
+    GEMINI + LTC_USD,
+    GEMINI + ETH_USD,
+    # Kraken
+    KRAKEN + BTC_USD,
+    KRAKEN + LTC_USD,
+    KRAKEN + ETH_USD,
+    KRAKEN + XRP_USD,
+    KRAKEN + EOS_USD,
+    KRAKEN + EOS_BTC,
 ]
 
 keys_exchange_somehow = [
@@ -114,7 +196,7 @@ shards = [
     Shard("shard8", 255211775190703847597530955573826158592, 297747071055821155530452781502797185023)
 ]
 
-for x in keys_exchange_somehow:
+for x in keys_market_first:
     hashedKey = int(hashlib.md5(str(x).encode('utf-8')).hexdigest(), 16)
     for shard in shards:
         if shard.startingHash <= hashedKey <= shard.endingHash:
